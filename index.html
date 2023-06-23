@@ -9,27 +9,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
+  <header class="hide">
     <nav>
-      <img src="img/bakfitoo.png" alt="Travelo" class="logo">
+      <img src="img/bakfitoo.png" alt="Bakafitsxn" class="logo">
       <ul>
         <li>
           <a href="#">Stores</a>
         </li>
         <li>
-          <a href="#">Login</a>
+          <li class="cart">
+            <i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i>
         </li>
-        <li class="search">
+        <li>
+          <li class="user">
           <a href="#">
-            <i class="fas fa-search"></i>
-          </a>
+            <i class="fa-solid fa-user-large"></i>
         </li>
-        <li class="hamburger">
-          <a href="#">
-            <div class="bar"></div>
-          </a>
+        <div class="search">
+          <input type="text" class="search__input" placeholder="Search">
+          <button class="search__button">
+            <i class="fa-solid fa-magnifying-glass" style="color: #1f514e;"></i>
+          </button>
+      </div>
         </li>
       </ul>
     </nav>
@@ -56,13 +58,16 @@
     <img src="img/fog_2.png" data-speedx="0.15" data-speedy="0.0115" data-speedz="0" data-rotation="0" data-distance="3600" class="parallax fog-2">
     <img src="img/mountain_2.png" data-speedx="0.135" data-speedy="0.013" data-speedz="0.42" data-rotation="0.15" data-distance="3800" class="parallax mountain-2">
     <img src="img/mountain_1.png" data-speedx="0.027" data-speedy="0.018" data-speedz="0.53" data-rotation="0.2" data-distance="4000" class="parallax mountain-1">
-    <img src="img/sun_rays.png" class="parallax sun-rays">
-    <img src="img/black_shadow.png" class="black-shadow">
+    <img src="img/sun_rays.png" class="sun-rays hide">
+    <img src="img/black_shadow.png" class="black-shadow hide ">
     <img src="img/fog_1.png" data-speedx="0.12" data-speedy="0.12" data-speedz="0" data-rotation="0" data-distance="4200" class="parallax fog-1">
+    <div class="boxfreem hide parallax"></div>
   </main>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="js/app.js" defer></script>
   <script src="js/gsap.min.js" defer></script>
 </body>
 
 </html>
+
