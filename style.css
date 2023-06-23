@@ -10,6 +10,7 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    overflow: auto;
 }
 
 ::selection{
@@ -18,10 +19,12 @@ body{
 
 .logo {
     width: 110px;
+    margin-left: -10px;
 }
 
 header{
     position: absolute;
+    display: absolute;
     z-index: 9999;
     padding: 0.9rem 0;
     top: 0;
@@ -37,73 +40,85 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 20px;
 }
+
 
 header ul{
     display: flex;
     list-style: none;
     align-items: center;
+    margin-left: auto;
+    margin-right: 6rem;
 }
 
 header ul a{
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
     padding: 0 1.5rem;
     text-transform: uppercase;
-    font-weight: 300;
-    font-size: 0.83rem;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.search a{
-    font-size: 1.05rem;
-    padding: 0 3rem;
-}
 
-.hamburger {
-    padding-left: 1.5rem;
 
-}
-.hamburger a{
-    padding: 0;
-    width: 37px;
-    height: 37px;
-    display: flex;
-    border-radius: 50%;
-    background-color: rgba(115, 115, 115, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    justify-content: center;
-    align-items: center;
-}
-
-.hamburger .bar{
-    position: relative;
-    width: 52%;
-    height: 1.3px;
-    background-color: #fff;
-    border-radius: 2px;
-}
-
-.hamburger .bar::before, 
-.hamburger .bar::after{
-    content: "";
+.search {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 100%;
-    background-color: inherit;
-    border-radius: 2px;
-}
-
-.hamburger .bar::before{
-    top: -4.5px;
-}
-
-.hamburger .bar::after{
-    top: 4.5px;
-}
-
+    top: 0.6rem;
+    right: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #000000;
+    padding: 0.7rem 0.8rem;
+    border-radius: 30px;
+    width: 10em;
+    height: 1.8rem;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 600;
+    color: #6b6b6b;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f3f3f3;
+  }
+  
+  .search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+  }
 main {
     position: relative;
     height: 100vh;
@@ -288,12 +303,25 @@ main {
 
 .vignette {
     position: absolute;
-    z-index: 100;
+    z-index: 30;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.7));
     pointer-events: none;
 }
+
+.boxfreem {
+    height: 2000px;
+    z-index: 31;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1366px;
+    margin-top: 1300px;
+    background: linear-gradient(to bottom, rgb(0, 26, 17), rgb(0, 94, 62));
+}
+
 
